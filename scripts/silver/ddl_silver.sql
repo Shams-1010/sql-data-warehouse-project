@@ -1,4 +1,15 @@
--- Creating bronze layer Table for the crm_cust_info folder
+/*
+================================================================================
+DDL SCRIPT: CREATING SILVER TABLE
+
+Script Purpose: This script creates tables in the schema silver, dropping
+existing tables if they already exists
+By running this script, you will be redifining the ddl structure of silver table
+================================================================================
+*/
+
+
+-- Creating silver layer Table for the crm_cust_info folder
 
 IF OBJECT_ID('silver.crm_cust_info', 'U') IS NOT NULL 
     DROP TABLE silver.crm_cust_info
