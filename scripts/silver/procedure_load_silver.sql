@@ -1,14 +1,16 @@
 /*
 ========================================================================================================
-STORED PROCEDURE: Load bronze layer ( From source system to bronze)
+STORED PROCEDURE: Load silver layer (From bronze to silver)
 ========================================================================================================
-SCRIPT PURPOSE: This stored procedure loads data into the bronze schema from external CSV files.
-It performs the following action:
-Truncates table before loading data.
-Uses the BULK INSERT command to load data from the csv files to the bronze tables.
+SCRIPT PURPOSE: This stored procedure Performs the ETL (Extract, Transform & Load) Function,
+Extracting data from the bronze layer, Transforming the data into a clean and analyzable format
+  Actions Performed: 
+-- Truncates table
+-- Transform and clean data from the bronze table to the silver table
+-- Uses the BULK INSERT command to load data from the csv files to the bronze tables.
 
 Usage example: 
-  EXEC bronze.load_bronze;
+  EXEC silver.load_bronze;
 
 ========================================================================================================
 */
